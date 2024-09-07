@@ -7,16 +7,12 @@ on:
 
 jobs:
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
-          name: build-${{ matrix.os }}
+          name: build-${{ matrix.os }}  # Ensure this matches the artifact name from the build workflow
 
       - name: Create GitHub release
         id: create_release
