@@ -1,0 +1,3 @@
+C:/Users/Emil/Desktop/TestCIWorkflow/build/CMakeFiles/main.dir
+C:/Users/Emil/Desktop/TestCIWorkflow/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Emil/Desktop/TestCIWorkflow/build/CMakeFiles/ZERO_CHECK.dir
