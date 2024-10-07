@@ -25,7 +25,7 @@ jobs:
           logfile: ${{ github.workspace }}/build/compile_commands.json
 
       - name:  Upload the results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: "CodeChecker Bug Reports"
           path: ${{ steps.codechecker.outputs.result-html-dir }}
