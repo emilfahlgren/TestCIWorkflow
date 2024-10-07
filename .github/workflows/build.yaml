@@ -3,7 +3,7 @@ name: Build workflow
 permissions: {}
 
 on:
-  push:
+  pull_request: main
 
 jobs:
   build:
