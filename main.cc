@@ -1,3 +1,5 @@
+/* Copyright 2024 Emil Fahlgren */
+
 #include <iostream>
 
 int main() {

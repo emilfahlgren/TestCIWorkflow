@@ -1,4 +1,7 @@
 name: Build workflow
+
+permissions: {}
+
 on:
   push:
 
