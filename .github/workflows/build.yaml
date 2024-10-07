@@ -3,7 +3,7 @@ on:
   push:
 
 jobs:
-  build:
+  build-and-analyze:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -18,17 +18,13 @@ jobs:
       - name: Build CMake project
         run: cmake --build build
 
-
-
-  static-analysis:
-    steps:
-      # Run the analysis
+      - name: Run analysis
       - uses: whisperity/codechecker-analysis-action@v1
         id: codechecker
         with:
           logfile: ${{ github.workspace }}/build/compile_commands.json
 
-      # Upload the results to the CI.
+      - name:  Upload the results
       - uses: actions/upload-artifact@v2
         with:
           name: "CodeChecker Bug Reports"
