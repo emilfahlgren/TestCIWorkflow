@@ -1,9 +1,10 @@
 name: Build workflow
 
-permissions: {}
+permissions: read-all
 
 on:
-  pull_request: main
+  pull_request:
+    branches: main
 
 jobs:
   build:
