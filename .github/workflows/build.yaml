@@ -1,29 +1,19 @@
 name: Build workflow
 on:
   push:
-    branches-ignore: [main]
 
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Configure CMake project
-        run:  cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+        run:  cmake -S . -B build
 
       - name: Build CMake project
-        run: cmake --build build --config Release
-
-      - name: Upload build artifacts
-        if: success()
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-${{ matrix.os }}
-          path: |
-            build/Release/mytestapp
-            build/Release/mytestapp.exe
+        run: cmake --build build
