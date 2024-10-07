@@ -1,2 +1,3 @@
 # TestCIWorkflow
-This repo tests a simple pipeline using Github Actions
+
+This repository tests a simple pipeline using GitHub Actions.
